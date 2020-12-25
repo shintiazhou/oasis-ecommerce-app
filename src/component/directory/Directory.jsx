@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 const DirectoryComponent = () => {
     const sections = useSelector(state => selectDirectorySections(state))
     return <Directory>
+        <div className="detail">Shop Items by Categories</div>
         {sections.map(item => <DirectoryMenuItem key={item.id} object={item} />)}
     </Directory>
 }

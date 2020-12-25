@@ -10,7 +10,7 @@ const CustomButton = styled.button`
     outline: none;
     font-size: 18px;
     margin: 1em 0.8em;
-    color:black;
+    color:#B07B58;
 
     ::after,::before{
         content: '';
@@ -27,16 +27,16 @@ const CustomButton = styled.button`
         right: 0;
         border-top-color: transparent;
         border-left-color: transparent;
-        border-bottom-color: black;
-        border-right-color: black;
+        border-bottom-color: #B07B58;
+        border-right-color: #B07B58;
     }
     ::before{
         top: 0;
         left: 0;
         border-bottom-color: transparent;
         border-right-color: transparent;
-        border-top-color: black;
-        border-left-color: black;
+        border-top-color: #B07B58;
+        border-left-color: #B07B58;
     }
     :hover:before,:hover:after{
         width: 100%;

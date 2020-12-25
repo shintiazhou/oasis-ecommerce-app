@@ -1,9 +1,10 @@
 import styled from "styled-components"
 
 const DirectoryMenuItem = styled.div`
+margin-bottom:20px;
 .background{
     display:flex;
-    width:1140px;
+    width:100%;
     height:450px;
     background-repeat:no-repeat;
     margin:0 auto;
@@ -11,8 +12,8 @@ const DirectoryMenuItem = styled.div`
         align-self:center;
         margin:0 120px;
         width:400px;
-        .description{
-            
+        .title{
+            letter-spacing: 3px;
         }
     }
 }
