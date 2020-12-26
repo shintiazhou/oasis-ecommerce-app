@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
-import DirectoryMenuItem from "./directory-menu-item-style"
-import CustomButton from "../custom-button/CustomButton"
+import { DirectoryMenuItem, Button } from "./directory-menu-item-style"
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
@@ -48,7 +47,7 @@ const DirectoryMenuItemComponent = (props) => {
                 <p className="description">
                     {props.object.description}
                 </p>
-                <CustomButton text={`Shop ${props.object.title}`} />
+                <Button >{`Shop ${props.object.title}`}</Button>
             </div>
 
         </motion.div>
