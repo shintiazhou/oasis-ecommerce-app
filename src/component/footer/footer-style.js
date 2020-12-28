@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const Footer = styled.div`
-    margin-top:100px;
     width:100%;
     display:flex;
     height:270px;

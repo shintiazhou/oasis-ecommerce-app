@@ -39,10 +39,15 @@ const LandingPageCoverComponent = () => {
             animate="visible">
 
             "Style is something each of us already has, all we need to do is find it."
-                <div>
+            <div>
                 <Button>
                     Shop Now
-                    </Button>
+                </Button>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </Title>
 
