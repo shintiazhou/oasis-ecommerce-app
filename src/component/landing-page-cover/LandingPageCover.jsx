@@ -1,6 +1,6 @@
 import React from "react"
-import { LandingPageCover, Title, Button } from "./landing-page-cover-style"
-
+import { LandingPageCover, Title } from "./landing-page-cover-style"
+import { Link } from "react-router-dom"
 const containerVariants = {
     hidden: {
         opacity: 0,
@@ -40,9 +40,11 @@ const LandingPageCoverComponent = () => {
 
             "Style is something each of us already has, all we need to do is find it."
             <div>
-                <Button>
+
+                <Link className="button" to="/shop">
                     Shop Now
-                </Button>
+                </Link>
+
             </div>
             <div class="arrow">
                 <span></span>

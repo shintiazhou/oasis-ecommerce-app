@@ -1,11 +1,11 @@
 import styled from "styled-components"
-const CollectionItem = styled.div`
+import { motion } from "framer-motion"
+const CollectionItem = styled(motion.div)`
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 450px;
     align-items: center;
     position: relative;
-    margin:0 20px;
     
     .img-container{
     width: 100%;
@@ -35,12 +35,11 @@ const CollectionItem = styled.div`
             transform:translatey(0);
         }
         button{
-            -webkit-transition-delay:.2s;
-            transition-delay:.2s;
+            -webkit-transition-delay:.15s;
+            transition-delay:.15s;
         }
     }
     p{
-        text-transform:uppercase;
         color:white;
         text-align:center;
         position:relative;
@@ -100,8 +99,18 @@ const CollectionItem = styled.div`
         width: 100%;
         height: 5%;
         display: flex;
-        justify-content: space-between;
+        flex-direction:column;
+        align-items:center;
         font-size: 18px;
+        margin-bottom:40px;
+        .name{
+            font-weight:bold;
+            margin-bottom:3px;
+        }
+        .price{
+            padding:5px 7px 5px 5px;
+            border-bottom:2px solid #b07b58;
+        }
     }
 `
 export default CollectionItem

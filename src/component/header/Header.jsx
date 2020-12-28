@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Header from "./header-style"
 import { ReactComponent as Logo } from "../../assets/oasis-logo.svg"
+import { Link } from "react-router-dom"
 
 const HeaderComponent = () => {
     const [pos, setPos] = useState("top")
@@ -21,13 +22,15 @@ const HeaderComponent = () => {
         }}
     >
         <div className="left">
-            <span className="option">SHOP</span>
+            <Link className="option" to="/shop">SHOP</Link>
             <span className="option">ABOUT US</span>
         </div>
 
-        <div className="logo-container">
+        <Link
+            to="/"
+            className="logo-container">
             <Logo className="logo" />
-        </div>
+        </Link>
         <div className="right">
             <span className="option">LOG IN</span>
             <span className="option">CART</span>
