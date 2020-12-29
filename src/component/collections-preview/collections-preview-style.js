@@ -6,6 +6,7 @@ const CollectionPreview = styled.div`
     flex-direction: column;
     margin:100px 0 0px 0;
     .title {
+        font-weight:bolder;
         letter-spacing:2px;
         align-self:center;
         font-size: 28px;

@@ -1,4 +1,4 @@
-import CollectionItem from "./collection-item-style"
+import CollectionItem from "./collections-item-style"
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";

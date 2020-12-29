@@ -1,8 +1,8 @@
 import React from "react"
-import CollectionOverview from "./collection-overview-style"
+import CollectionOverview from "./collections-overview-style"
 import { useSelector } from "react-redux"
 import { selectShopCollectionsMap } from "../../redux/shop/shop.selectors"
-import CollectionPreview from "../collections-preview/CollectionPreview"
+import CollectionPreview from "../collections-preview/CollectionsPreview"
 
 const CollectionOverviewComponent = () => {
     const collections = useSelector(state => selectShopCollectionsMap(state))

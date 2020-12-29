@@ -5,8 +5,8 @@ const WithSpinner = Component => {
     const spinner = ({ isLoading, ...otherprops }) => {
         return isLoading ? (
             <SpinnerOverlay>
-                <div class='container'>
-                    <div class='loader-container'>
+                <div className='container'>
+                    <div className='loader-container'>
                         <div></div>
                         <div></div>
                         <div></div>

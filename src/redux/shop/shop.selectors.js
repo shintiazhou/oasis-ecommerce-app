@@ -18,3 +18,11 @@ export const selectShopCollectionsMap = createSelector(
     [selectShopCollections],
     collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 )
+export const selectShopCollection = collectionUrl => createSelector(
+    [selectShopCollections],
+    collection => collection ? collection[collectionUrl] : null
+)
+export const selectShopIsLoaded = createSelector(
+    [selectShop],
+    shop => !!shop.collections
+)

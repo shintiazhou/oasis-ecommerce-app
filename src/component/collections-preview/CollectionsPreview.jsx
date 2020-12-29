@@ -1,12 +1,18 @@
 import React from "react"
-import CollectionPreview from "./collection-preview-style"
-import CollectionItem from "../collection-Item/CollectionItem"
+import CollectionPreview from "./collections-preview-style"
+import CollectionItem from "../collections-Item/CollectionsItem"
+import { useLocation, Link } from "react-router-dom"
 
 const CollectionPreviewComponent = (props) => {
+    const location = useLocation()
     return <CollectionPreview>
-        <h2 className="title">
+        {console.log(location.pathname)}
+
+        <Link
+            className="title"
+            to={`${location.pathname}/${props.object.routeName}`}>
             {props.object.title.toUpperCase()}
-        </h2>
+        </Link>
         <div className="preview">
             {props.object.items.filter((item, index) => {
                 return index < 8

@@ -46,7 +46,7 @@ const LandingPageCoverComponent = () => {
                 </Link>
 
             </div>
-            <div class="arrow">
+            <div className="arrow">
                 <span></span>
                 <span></span>
                 <span></span>
