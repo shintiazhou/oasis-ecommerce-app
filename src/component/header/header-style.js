@@ -15,7 +15,7 @@ const Header = styled.div`
     
     .logo-container{
         cursor:pointer;
-        padding-right:30px;
+        padding-right:4%;
     }
     .option{
         cursor:pointer;
@@ -28,6 +28,8 @@ const Header = styled.div`
     }
     .right{
         margin-right:200px;
+        display:flex;
+        align-items:center;
             .option{
             margin-right:50px;
         }

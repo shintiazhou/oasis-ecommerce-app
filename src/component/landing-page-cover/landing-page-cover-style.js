@@ -20,7 +20,6 @@ export const LandingPageCover = styled(motion.div)`
         border: 0;
         transition: all 0.5s;
         border-radius: 10px;
-        width: auto;
         position: relative;
 
         &::after {

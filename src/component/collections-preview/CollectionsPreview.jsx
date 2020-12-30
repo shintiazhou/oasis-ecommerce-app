@@ -1,18 +1,16 @@
 import React from "react"
 import CollectionPreview from "./collections-preview-style"
 import CollectionItem from "../collections-Item/CollectionsItem"
-import { useLocation, Link } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 const CollectionPreviewComponent = (props) => {
-    const location = useLocation()
     return <CollectionPreview>
-        {console.log(location.pathname)}
-
-        <Link
+        <span
             className="title"
-            to={`${location.pathname}/${props.object.routeName}`}>
+            onClick={() => props.history.push(`${props.match.url}/${props.object.routeName}`)}>
+
             {props.object.title.toUpperCase()}
-        </Link>
+        </span>
         <div className="preview">
             {props.object.items.filter((item, index) => {
                 return index < 8
@@ -20,4 +18,4 @@ const CollectionPreviewComponent = (props) => {
         </div>
     </CollectionPreview>
 }
-export default CollectionPreviewComponent
+export default withRouter(CollectionPreviewComponent)

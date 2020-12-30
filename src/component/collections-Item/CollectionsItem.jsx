@@ -2,7 +2,8 @@ import CollectionItem from "./collections-item-style"
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
-
+import { addItem } from "../../redux/cart/cart.actions"
+import { useDispatch } from "react-redux"
 const containerVariants = {
     visible: {
         opacity: 1,
@@ -18,6 +19,7 @@ const containerVariants = {
 }
 
 const CollectionItemComponent = (props) => {
+    const dispatch = useDispatch()
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -39,7 +41,9 @@ const CollectionItemComponent = (props) => {
             </div>
             <div className="overlay">
                 <p>{props.object.name}</p>
-                <button>add to cart</button>
+                <button
+                    onClick={() => dispatch(addItem(props.object))}
+                >add to cart</button>
             </div>
         </div>
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { LandingPageCover, Title } from "./landing-page-cover-style"
-import { Link } from "react-router-dom"
+import { withRouter } from "react-router-dom"
+
 const containerVariants = {
     hidden: {
         opacity: 0,
@@ -26,7 +27,7 @@ const childVariants = {
     }
 }
 
-const LandingPageCoverComponent = () => {
+const LandingPageCoverComponent = (props) => {
     return <LandingPageCover
         style={{
             backgroundImage: "url(https://i.ibb.co/6vq7wyv/landing-page.jpg)"
@@ -40,10 +41,11 @@ const LandingPageCoverComponent = () => {
 
             "Style is something each of us already has, all we need to do is find it."
             <div>
-
-                <Link className="button" to="/shop">
+                <span className="button"
+                    onClick={() => props.history.push("shop")}
+                >
                     Shop Now
-                </Link>
+                </span>
 
             </div>
             <div className="arrow">
@@ -55,4 +57,4 @@ const LandingPageCoverComponent = () => {
 
     </LandingPageCover>
 }
-export default LandingPageCoverComponent
+export default withRouter(LandingPageCoverComponent)

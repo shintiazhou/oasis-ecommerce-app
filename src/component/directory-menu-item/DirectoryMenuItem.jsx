@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { DirectoryMenuItem } from "./directory-menu-item-style"
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import { Link } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 const containerVariants = {
     visible: {
@@ -48,14 +48,14 @@ const DirectoryMenuItemComponent = (props) => {
                 <p className="description">
                     {props.object.description}
                 </p>
-                <Link
+                <span
                     className="button"
-                    to={`shop/${props.object.title.toLowerCase()}`}
-                >{`Shop ${props.object.title}`}</Link>
+                    onClick={() => props.history.push(`${props.match.url}${props.object.linkUrl}`)}
+                >{`Shop ${props.object.title}`}</span>
             </div>
 
         </motion.div>
 
     </DirectoryMenuItem>
 }
-export default DirectoryMenuItemComponent
+export default withRouter(DirectoryMenuItemComponent)
