@@ -37,6 +37,7 @@ const CollectionItem = styled(motion.div)`
         button{
             -webkit-transition-delay:.15s;
             transition-delay:.15s;
+            
         }
     }
     p{
@@ -77,6 +78,7 @@ const CollectionItem = styled(motion.div)`
         transition:all .4s linear;
     }
     button {
+        outline:none;
         text-decoration:none;
         display:inline-block;
         text-transform:uppercase;
@@ -91,6 +93,10 @@ const CollectionItem = styled(motion.div)`
         padding:7px 14px;
         &:hover{
             box-shadow:0 0 5px #fff;
+        }
+        &:active{
+            transform:scale(1.2);
+            transition:0.1s;
         }
     }
 

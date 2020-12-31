@@ -6,16 +6,17 @@ export const LandingPageCover = styled(motion.div)`
     display:flex;
     background-size:cover;
     background-repeat:no-repeat;
-    width: 100%;
-    height:700px;
+    width: 100vw;
+    height:60vw;
     justify-content:flex-end;
+    
 
     .button{
         top:50px;
         background: #214142;
         color: #ffffff;
         cursor: pointer;
-        font-size: 1.01em;
+        font-size: 0.5em;
         padding: 20px;
         border: 0;
         transition: all 0.5s;
@@ -27,7 +28,7 @@ export const LandingPageCover = styled(motion.div)`
         font-weight: 400;
         position: absolute;
         left: 85%;
-        top: 31%;
+        top: 38%;
         right: 5%;
         bottom: 0;
         opacity: 0;
@@ -47,7 +48,12 @@ export const LandingPageCover = styled(motion.div)`
 
         }
     }
-
+        @media(max-width:790px){
+            padding:15px;
+            &:hover{
+                padding:1.1rem 1.5rem 1.1rem 1.1rem;
+            }
+        }
     }
 
     .arrow{
@@ -89,13 +95,16 @@ export const LandingPageCover = styled(motion.div)`
     }
 `
 export const Title = styled(motion.h2)`
-    width:500px;
+    width:470px;
     font-weight:bolder;
-    font-size:2em;
+    font-size:1.5em;
     font-style:italic;
     letter-spacing:2px;
     margin-right:100px;
     color:#214142;
     align-self:center;
-
+    @media(max-width:790px){
+        font-size:15px;
+        width:150px;
+    }
 `

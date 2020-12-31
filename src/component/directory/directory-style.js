@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 const Directory = styled.div`
-    width:1140px;
+    width:80%;
     margin:0 auto;
     .detail{
-        padding:40px;
-        font-size:3em;
+        padding:20px;
+        font-size:1.5em;
         font-weight:bolder;
         border-bottom:2px solid #7FCFD4 ;
         margin-bottom:30px;

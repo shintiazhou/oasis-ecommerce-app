@@ -30,7 +30,7 @@ const DirectoryMenuItemComponent = (props) => {
     }, [controls, inView]);
 
     return <DirectoryMenuItem>
-        <motion.div className="background"
+        <motion.div className={props.object.align === "right" ? "background left" : "background right"}
             variants={containerVariants}
             ref={ref}
             animate={controls}
@@ -42,17 +42,21 @@ const DirectoryMenuItemComponent = (props) => {
         >
 
             <div className="content">
-                <h1 className="title">
-                    {props.object.title.toUpperCase()}
-                </h1>
-                <p className="description">
-                    {props.object.description}
-                </p>
-                <span
-                    className="button"
-                    onClick={() => props.history.push(`${props.match.url}${props.object.linkUrl}`)}
-                >{`Shop ${props.object.title}`}</span>
-            </div>
+                <div className="overlay">
+                </div>
+                    <h1 className="title">
+                        {props.object.title.toUpperCase()}
+                    </h1>
+                    <p className="description">
+                        {props.object.description}
+                    </p>
+                    <span
+                        className="button"
+                        onClick={() => props.history.push(`${props.match.url}${props.object.linkUrl}`)}
+                    >{`Shop ${props.object.title}`}</span>
+                </div>
+
+
 
         </motion.div>
 

@@ -3,7 +3,7 @@ import Header from "./header-style"
 import { ReactComponent as Logo } from "../../assets/oasis-logo.svg"
 import { Link } from "react-router-dom"
 import CartIcon from "../cart-icon/CartIcon"
-import CartDropdown from "../cart-dropdown/CartDropdown"
+import CartDropdown from "../cart-menu/CartMenu"
 
 
 

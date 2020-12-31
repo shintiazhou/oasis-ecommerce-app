@@ -1,7 +1,7 @@
 import React from "react"
 import CartItem from "./cart-item-style"
 import { useDispatch } from "react-redux"
-import { addItem, removeItem } from "../../redux/cart/cart.actions"
+import { addItem, clearItem, removeItem } from "../../redux/cart/cart.actions"
 
 
 const CartItemComponent = (props) => {
@@ -20,7 +20,9 @@ const CartItemComponent = (props) => {
                 <span className="price">$ {props.object.price * props.object.quantity}</span>
             </div>
             <div className="lower">
-                <span className="clear">REMOVE</span>
+                <span className="clear"
+                    onClick={() => dispatch(clearItem(props.object))}
+                >REMOVE</span>
                 <span
                     className="option"
                     onClick={() => dispatch(removeItem(props.object))}

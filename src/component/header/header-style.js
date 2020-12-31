@@ -25,6 +25,9 @@ const Header = styled.div`
         .option{
             margin-left:50px;
         }
+        @media(max-width:970px){
+            margin:0;
+        }
     }
     .right{
         margin-right:200px;
@@ -33,6 +36,12 @@ const Header = styled.div`
             .option{
             margin-right:50px;
         }
+        @media(max-width:970px){
+            margin-right:10px;
+        }
+    }
+    @media(max-width:970px){
+        font-size:10px;
     }
 
 `
