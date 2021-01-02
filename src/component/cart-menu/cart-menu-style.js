@@ -41,6 +41,22 @@ const CartMenu = styled(Menu)`
         text-align:center;
         color:white;
         padding-bottom:380px;
+        .empty-message{
+            h5{
+                font-weight:normal;
+                margin-bottom:50px;
+            }
+            .link{
+                color:white;
+                padding:5px;
+                border-bottom:2px solid #b07b58;
+                text-transform:uppercase;
+                &:hover{
+                    transition-duration:.7s;
+                    background-color: #b07b58;
+                }
+            }
+        }
         .arrow{
             position:absolute;
             cursor:pointer;

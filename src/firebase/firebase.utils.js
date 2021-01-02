@@ -40,7 +40,36 @@ export const convertCollectionsSnapshotToMap = (collections) => {
             return acc
         }, {});
 }
+export const createUserProfileDocument = async (user, aditionalData) => {
+    if (!user) return
 
+    const userRef = firestore.doc(`users/${user.uid}`)
+    const snapShot = await userRef.get()
+
+    if (!snapShot.exists) {
+        const { displayName, email } = user
+        const createdAt = new Date()
+
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                createdAt,
+                ...aditionalData
+            })
+        } catch (error) {
+            console.log(error.message)
+            alert("error creating user profile document", error.message)
+        }
+    }
+    return userRef
+}
+
+export const auth = firebase.auth()
+
+export const googleProvider = new firebase.auth.GoogleAuthProvider()
+
+googleProvider.setCustomParameters({ prompt: "select_account" })
 export const firestore = firebase.firestore();
 
 export default firebase;

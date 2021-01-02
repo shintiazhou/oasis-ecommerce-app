@@ -4,10 +4,12 @@ import { ReactComponent as Logo } from "../../assets/oasis-logo.svg"
 import { Link } from "react-router-dom"
 import CartIcon from "../cart-icon/CartIcon"
 import CartDropdown from "../cart-menu/CartMenu"
-
+import { selectCurrentUser } from "../../redux/user/user.selectors"
+import { useSelector } from "react-redux"
 
 
 const HeaderComponent = () => {
+    const user = useSelector(state => selectCurrentUser(state))
     const [pos, setPos] = useState("top")
     useEffect(() => {
         document.addEventListener("scroll", e => {
@@ -39,8 +41,15 @@ const HeaderComponent = () => {
                 className="logo-container">
                 <Logo className="logo" />
             </Link>
+
             <div className="right">
-                <span className="option">LOG IN</span>
+                <Link
+                    to={user ? "/account" : "/account/login"}
+                    className="option"
+                >
+                    {user ? "Account" : "Log In"}
+
+                </Link>
                 <CartIcon />
             </div>
         </Header>

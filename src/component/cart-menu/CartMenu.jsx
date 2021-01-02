@@ -5,8 +5,10 @@ import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
 import { toggleCartHidden } from "../../redux/cart/cart.actions"
 import CartItem from "../cart-item/CartItem"
-import CustomButton from "../custom-button/CustomButton"
 import StripeButton from "../stripe-button/StripeButton"
+import { Link } from "react-router-dom"
+
+
 const CartMenuComponent = () => {
     const dispatch = useDispatch()
     const hidden = useSelector(state => selectCartHidden(state))
@@ -33,7 +35,11 @@ const CartMenuComponent = () => {
                         {cartItems.map(item => <CartItem key={item.id} object={item} />)}
                     </div> :
 
-                    <span className="empty-message" >Nothing in your cart.</span>}
+                    <div className="empty-message" >
+                        <h5>Nothing in your cart.</h5>
+                        <Link to="/shop" className="link"
+                            onClick={() => dispatch(toggleCartHidden())}> go to shop </Link>
+                    </div>}
             </div>
             <div className="checkout">
                 <div className="subtotal">

@@ -19,6 +19,10 @@ const CollectionPage = styled.div`
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px 20px;
         border-bottom:3px solid #448487;
+        @media(max-width:1000px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
     }
 `
 export default CollectionPage

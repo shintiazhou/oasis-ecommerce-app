@@ -1,11 +1,11 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const CustomButton = styled.button`
     letter-spacing:3px;
     background-color: #ffffff; 
     border: 2px solid #448487;
     color: #448487;
-    padding: 16px 32px;
+    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -18,10 +18,14 @@ const CustomButton = styled.button`
         background-color: #448487;
         color: white;
     }
-    &:active{
-        box-shadow:0px 0px 15px 1px white; 
-        transition-duration: 0.1s;
-    }
 
+    ${props => props.google && css`
+        color:#4285f4;
+        border: 2px solid #4285f4;
+        &:hover{
+            background-color:#4285f4; 
+            color:white;
+        }
+`}
 `
 export default CustomButton
