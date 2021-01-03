@@ -12,7 +12,8 @@ import {
 import {
     auth,
     createUserProfileDocument,
-    googleProvider
+    googleProvider,
+    getCurrentUser
 } from "../../firebase/firebase.utils"
 
 function* getSnapShotFromUserAuth(user, additionalData) {
@@ -106,7 +107,27 @@ function* onSignUpSuccess() {
         signInAfterSignUp
     )
 }
+//------------ check user session---------------
 
+
+function* isUserAuthenticated() {
+    try {
+        const user = yield getCurrentUser()
+        if (!user) { return }
+        yield getSnapShotFromUserAuth(user)
+    } catch (error) {
+        yield alert(error.message)
+        yield put(signUpFailure(error))
+    }
+}
+
+
+function* checkUserSession() {
+    yield takeLatest(
+        userActionTypes.CHECK_USER_SESSION,
+        isUserAuthenticated
+    )
+}
 
 export default function* userSagas() {
     yield all([
@@ -114,6 +135,7 @@ export default function* userSagas() {
         call(onSignInWithGoogleStart),
         call(onSignOutStart),
         call(onSignUpStart),
-        call(onSignUpSuccess)
+        call(onSignUpSuccess),
+        call(checkUserSession)
     ])
 }

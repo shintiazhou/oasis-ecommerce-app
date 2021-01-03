@@ -21,7 +21,7 @@ const Header = styled.div`
         width:38%;
     }
     .right .option{
-        margin-left:15px;
+        margin-left:45px;
     }
     .left .option{
         margin-right:15px;

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const SignUp = styled.div`
-    width:50vw;
+    width:30vw;
     margin:0 auto;
     display:flex;
     flex-direction:column;

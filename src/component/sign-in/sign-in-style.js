@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const SignIn = styled.div`
-    width:50vw;
+    width:30vw;
     height:100%;
     margin:0 auto;
     h1{

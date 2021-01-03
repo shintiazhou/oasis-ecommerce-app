@@ -17,19 +17,19 @@ const AccountPageComponent = (props) => {
             exact
             path={props.match.path}
             render={() => currentUser ?
-                <AccountComponent /> : <Redirect to="/login" />}
+                <AccountComponent /> : <Redirect to="/account/login" />}
         />
         <Route
             exact
             path={`${props.match.path}/login`}
             render={() => currentUser ?
-                <Redirect to="/" /> : <SignIn />}
+                <Redirect to="/shop" /> : <SignIn />}
         />
         <Route
             exact
             path={`${props.match.path}/register`}
             render={() => currentUser ?
-                <Redirect to="/" /> : <SignUp />}
+                <Redirect to="/shop" /> : <SignUp />}
         />
     </AccountPage>
 }
