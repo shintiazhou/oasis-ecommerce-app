@@ -40,7 +40,7 @@ const CartMenu = styled(Menu)`
         outline:none;
         text-align:center;
         color:white;
-        padding-bottom:380px;
+        padding-bottom:220px;
         .empty-message{
             h5{
                 font-weight:normal;
@@ -62,7 +62,7 @@ const CartMenu = styled(Menu)`
             cursor:pointer;
             font-size:2.5em;
             top:0;
-            right:330px;
+            right:240px;
         }
         .title{
             font-size:18px;
@@ -79,33 +79,34 @@ const CartMenu = styled(Menu)`
             bottom: 0;
             font-size:12px;
             font-weight:lighter;
-            left: auto;
+            left:10px;
             top: auto;
-            height:300px;
-            padding: 24px;
-            width: 320px;
+            height:240px;
+            width: 280px;
+            padding:10px;
             background-color: #214142;
             z-index: 3;
             .subtotal,.tax,.total{
                 display:flex;
                 justify-content:space-between;
-                margin:5px 0;
+                margin:2px 0;
                 font-weight:lighter;
             }
             .tax{
                 border-bottom:2px solid white;
                 padding-bottom:20px ;
-                margin-bottom:20px;
+                margin-bottom:10px;
             }
             .total{
                 margin-bottom:20px;
             }
             button{
                 letter-spacing:4px;
-                height:2.5em;
+                height:2em;
                 margin-bottom:15px;
             }
             .test-warning{
+                font-size:12px;
                 background-color:red;
                 padding:3px;
             }

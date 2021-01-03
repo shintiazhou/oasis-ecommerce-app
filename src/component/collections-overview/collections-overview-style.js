@@ -6,5 +6,8 @@ const CollectionOverview = styled.div`
     flex-direction:column;
     margin: 0 auto;
     width:80%;
+    @media(max-width:500px ){
+        width:100%;
+    }
 `
 export default CollectionOverview

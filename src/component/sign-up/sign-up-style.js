@@ -9,6 +9,9 @@ const SignUp = styled.div`
         display:flex;
         flex-direction:column;
     }
+    @media(max-width:400px){
+        width:80vw;
+    }
 `
 
 export default SignUp

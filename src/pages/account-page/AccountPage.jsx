@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import AccountPage from "./account-page-style"
 import AccountComponent from "../../component/account/Account"
 import SignIn from "../../component/sign-in/SignIn"
@@ -8,6 +8,9 @@ import { selectCurrentUser } from "../../redux/user/user.selectors"
 import SignUp from "../../component/sign-up/SignUp"
 
 const AccountPageComponent = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const currentUser = useSelector(state => selectCurrentUser(state))
     return <AccountPage>
         <Route

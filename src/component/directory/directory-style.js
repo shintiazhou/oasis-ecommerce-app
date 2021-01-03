@@ -9,6 +9,9 @@ const Directory = styled.div`
         font-weight:bolder;
         border-bottom:2px solid #7FCFD4 ;
         margin-bottom:30px;
-}
+    }
+    @media(max-width:700px ){
+        width:100%;
+    }
 `
 export default Directory 

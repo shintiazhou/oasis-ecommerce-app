@@ -10,7 +10,9 @@ import { useSelector } from "react-redux"
 
 const HeaderComponent = () => {
     const user = useSelector(state => selectCurrentUser(state))
+
     const [pos, setPos] = useState("top")
+
     useEffect(() => {
         document.addEventListener("scroll", e => {
             let scrolled = document.scrollingElement.scrollTop;
@@ -23,34 +25,41 @@ const HeaderComponent = () => {
     }, [])
 
     const styles = {
-        backgroundColor: pos === "top" ? "rgba(0, 0, 0, 0)" : "rgba(68, 132, 135, .8)"
+        backgroundColor: pos === "top" ?
+            "rgba(0, 0, 0, 0)" :
+            "rgba(68, 132, 135, .8)"
         ,
         color: pos === "top" && "#214142"
     }
+
     return <div id="outer-container">
-        <Header
-            style={styles}
-        >
-            <div className="left">
-                <Link className="option" to="/shop">SHOP</Link>
-                <span className="option">ABOUT US</span>
+        <Header style={styles}>
+            <div className="header left">
+                <Link
+                    className="header left option"
+                    to="/shop">SHOP</Link>
+
+                <span className="header left option">ABOUT US</span>
             </div>
 
             <Link
                 to="/"
-                className="logo-container">
-                <Logo className="logo" />
+                className="header logo-container">
+                <Logo className="header logo-container logo" />
             </Link>
 
-            <div className="right">
+            <div className="header right">
                 <Link
-                    to={user ? "/account" : "/account/login"}
-                    className="option"
-                >
-                    {user ? "Account" : "Log In"}
-
+                    to={user ?
+                        "/account" :
+                        "/account/login"}
+                    className="header right option">
+                    {user ?
+                        "Account"
+                        : "Log In"}
                 </Link>
-                <CartIcon />
+                <CartIcon
+                    className="header cart-icon" />
             </div>
         </Header>
         <CartDropdown />

@@ -2,16 +2,16 @@ import styled from "styled-components"
 
 const CartItem = styled.div`
     width: 100%;
-    font-size:15px;
+    font-size:10px;
     display: flex;
     height: 100px;
-    padding-bottom:20px;
+    padding-bottom:10px;
     margin-bottom: 20px;
     text-align:center;
     border-bottom:2px solid white;
     img {
-        width: 80px;
-        height:90px;
+        width: 60px;
+        height:80px;
     }
     .detail{
         width: 90%;
@@ -19,21 +19,20 @@ const CartItem = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 10px 20px;
+        padding: 10px;
         text-align:left;
     }
     .upper{
         width:100%;
         display:block;
         position:relative;
-        margin-top:48px;
-        margin-bottom:30px;
         .name{
+            width:100px;
             font-weight:normal;
             text-transform:uppercase;
             letter-spacing:2px;
             margin-bottom:5px;
-            font-size:14px;
+            font-size:10px;
         }
         .description{
             font-weight:100;
@@ -43,14 +42,14 @@ const CartItem = styled.div`
         .price{
             position:absolute;
             top:0;
-            right:0;
-            font-size:12px;
+            right:-10px;
+            font-size:10px;
         }
     }
     .lower{
         width:50%;
-        font-size:12px;
-        margin-bottom:40px;
+        font-size:10px;
+        margin-top:20px;
         display:flex;
         justify-content:space-between;
         .clear{

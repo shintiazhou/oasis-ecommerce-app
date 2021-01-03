@@ -108,7 +108,8 @@ const CollectionItem = styled(motion.div)`
         flex-direction:column;
         align-items:center;
         font-size: 18px;
-        margin-bottom:40px;
+        margin-bottom:50px;
+        text-align:center;
         .name{
             font-weight:bold;
             margin-bottom:3px;
@@ -117,6 +118,9 @@ const CollectionItem = styled(motion.div)`
             padding:5px 7px 5px 5px;
             border-bottom:2px solid #b07b58;
         }
+    }
+    @media(max-width:700px){
+        height:300px;
     }
 `
 export default CollectionItem

@@ -20,7 +20,7 @@ const CollectionPage = styled.div`
         gap: 20px 20px;
         border-bottom:3px solid #448487;
         @media(max-width:1000px){
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
         
     }

@@ -42,5 +42,11 @@ const CustomFormInput = styled.div`
             ${shrinkLabel}
         }
     }
+    @media(max-width:400px){
+        .form-input{
+            font-size:13px;
+        }
+        
+    }
 `
 export default CustomFormInput

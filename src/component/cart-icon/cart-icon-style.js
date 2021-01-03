@@ -21,5 +21,13 @@ const CartIcon = styled.div`
         text-align:center;
         color:white;
     }
+    @media(max-width:500px){
+        width:28px;
+        .item-count{
+            font-size: 7px;
+            right:5px !important;
+            bottom:26px !important;
+        }
+    }
 `
 export default CartIcon

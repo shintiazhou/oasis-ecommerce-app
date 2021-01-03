@@ -7,35 +7,58 @@ export const LandingPageCover = styled(motion.div)`
     background-size:cover;
     background-repeat:no-repeat;
     width: 100vw;
-    height:60vw;
+    height:50vw;
     justify-content:flex-end;
-    
+    @media(max-width:1014px){
+        height:80vw;
+    }
 
-    .button{
-        top:50px;
-        background: #214142;
-        color: #ffffff;
-        cursor: pointer;
-        font-size: 0.5em;
-        padding: 20px;
-        border: 0;
-        transition: all 0.5s;
-        border-radius: 10px;
-        position: relative;
+`
+export const Caption = styled(motion.div)`
+    width:470px;
+    font-weight:bolder;
+    font-size:1.5em;
+    font-style:italic;
+    letter-spacing:2px;
+    margin-right:2vw;
+    color:#214142;
+    align-self:center;
+    @media(max-width:1014px){
+        font-size:100%;
+        width:300px;
+        margin-right:4vw;
+    }
+    @media(max-width:700px){
+        margin-top:50px;
+        font-size:70%;
+        width:200px;
+        margin-right:4vw;
+    }
+`
+export const Button = styled.span`
+    top:50px;
+    background: #214142;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.5em;
+    padding: 20px;
+    border: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    position: relative;
 
-        &::after {
+    &::after {
         content: ">";
-        font-weight: 400;
+        font-family:sans-serif;
+        font-weight: 800;
         position: absolute;
         left: 85%;
         top: 38%;
         right: 5%;
         bottom: 0;
         opacity: 0;
-
-        }
-
-        &:hover {
+    }
+    &:hover {
         background: #214142;
         transition: all 0.5s;
         border-radius: 10px;
@@ -43,68 +66,17 @@ export const LandingPageCover = styled(motion.div)`
         padding: 1.5rem 3.5rem 1.5rem 1.5rem;
 
         &::after {
-        opacity: 1;
-        transition: all 0.5s;
-
-        }
-    }
-        @media(max-width:790px){
-            padding:15px;
-            &:hover{
-                padding:1.1rem 1.5rem 1.1rem 1.1rem;
-            }
-        }
-    }
-
-    .arrow{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        margin-top:230px;
-        margin-left:280px;
-    }
-    .arrow span{
-        display: block;
-        width: 30px;
-        height: 30px;
-        border-bottom: 5px solid #06A8FF;
-        border-right: 5px solid #06A8FF;
-        transform: rotate(45deg);
-        margin: -10px;
-        animation: animate 2s infinite;
-    }
-    .arrow span:nth-child(2){
-        animation-delay: -0.2s;
-    }
-    .arrow span:nth-child(3){
-        animation-delay: -0.4s;
-    }
-    @keyframes animate {
-        0%{
-            opacity: 0;
-            transform: rotate(45deg) translate(-20px,-20px);
-        }
-        50%{
             opacity: 1;
-        }
-        100%{
-            opacity: 0;
-            transform: rotate(45deg) translate(20px,20px);
+            transition: all 0.5s;
         }
     }
-`
-export const Title = styled(motion.h2)`
-    width:470px;
-    font-weight:bolder;
-    font-size:1.5em;
-    font-style:italic;
-    letter-spacing:2px;
-    margin-right:100px;
-    color:#214142;
-    align-self:center;
-    @media(max-width:790px){
-        font-size:15px;
-        width:150px;
+    @media(max-width:1014px){
+        padding:1.5em;
+        top:20px;
+        &:hover{
+            padding:2em 3em 2em 2em;
+        }
+        
     }
+    
 `

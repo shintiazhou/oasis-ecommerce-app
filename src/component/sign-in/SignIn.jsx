@@ -45,13 +45,14 @@ const SignInComponent = () => {
                     type="submit">
                     Sign In
                 </CustomButton>
-                <p>
-                    New to Oasis?
+                <div>
+                    <span>New to Oasis?</span>
+
                     <Link
                         className="sign-up"
                         to="/account/register"
                     > Sign Up Now!</Link>
-                </p>
+                </div>
                 <span>or</span>
 
                 <CustomButton

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { DirectoryMenuItem } from "./directory-menu-item-style"
+import { DirectoryMenuItem, Button } from "./directory-menu-item-style"
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { withRouter } from "react-router-dom"
@@ -30,31 +30,33 @@ const DirectoryMenuItemComponent = (props) => {
     }, [controls, inView]);
 
     return <DirectoryMenuItem>
-        <motion.div className={props.object.align === "right" ? "background left" : "background right"}
+        <motion.div
+            className={props.object.align === "right" ? "background left" : "background right"}
             variants={containerVariants}
             ref={ref}
             animate={controls}
             initial="hidden"
             style={{
                 backgroundImage: `url(${props.object.imageUrl})`
-                , justifyContent: props.object.align === "right" ? "flex-end" : "flex-start"
+                ,
+                justifyContent: props.object.align === "right" ? "flex-end" : "flex-start"
             }}
         >
 
             <div className="content">
                 <div className="overlay">
                 </div>
-                    <h1 className="title">
-                        {props.object.title.toUpperCase()}
-                    </h1>
-                    <p className="description">
-                        {props.object.description}
-                    </p>
-                    <span
-                        className="button"
-                        onClick={() => props.history.push(`${props.match.url}${props.object.linkUrl}`)}
-                    >{`Shop ${props.object.title}`}</span>
-                </div>
+                <h1 className="title">
+                    {props.object.title.toUpperCase()}
+                </h1>
+                <p className="description">
+                    {props.object.description}
+                </p>
+                <Button
+                    onClick={() => props.history.push(`${props.match.url}${props.object.linkUrl}`)}
+                >{`Shop ${props.object.title}`}
+                </Button>
+            </div>
 
 
 

@@ -12,36 +12,31 @@ const Header = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
-    
-    .logo-container{
-        cursor:pointer;
-        padding-right:4%;
-    }
-    .option{
-        cursor:pointer;
-    }
-    .left{
-        margin-left:200px;
-        .option{
-            margin-left:50px;
-        }
-        @media(max-width:970px){
-            margin:0;
-        }
-    }
-    .right{
-        margin-right:200px;
+    padding:0 10%;
+
+    .right, .left{
         display:flex;
         align-items:center;
-            .option{
-            margin-right:50px;
-        }
-        @media(max-width:970px){
-            margin-right:10px;
-        }
+        justify-content:space-between;
+        width:38%;
     }
-    @media(max-width:970px){
-        font-size:10px;
+    .right .option{
+        margin-left:15px;
+    }
+    .left .option{
+        margin-right:15px;
+    }
+    @media(max-width:960px){
+        font-size:0.7em;
+    }
+    @media(max-width:500px){
+        font-size:0.5em;
+        .left, .right{
+            width:38%;
+        }
+        .logo{
+            width:30px;
+        }
     }
 
 `

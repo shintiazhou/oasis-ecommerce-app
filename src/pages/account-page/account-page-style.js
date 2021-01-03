@@ -4,7 +4,7 @@ const AccountPage = styled.div`
     color:#448487;
     width:80vw;
     margin:0 auto;
-    height:100vw;
+    height:900px;
     text-align:center;
     padding:150px 0 20px 0;
 `

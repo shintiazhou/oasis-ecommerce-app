@@ -1,70 +1,69 @@
 import styled from "styled-components"
 
 export const DirectoryMenuItem = styled.div`
-margin-bottom:20px;
-.background{
-    display:flex;
-    width:100%;
-    height:450px;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin:0 auto;
-    position:relative;
+    margin-bottom:20px;
 
-    &.left{
-        background-position:20% 0;
-        @media (max-width: 970px) {
-            background-position:-50px 0;
-        } 
-    }
-
-    &.right{
-        @media (max-width: 1300px) {
-            background-position:60% 0;
-        }   
-        @media (max-width: 970px) {
-            background-position:-600px 0;
-        } 
-    }
-
-    .content{
-        align-self:center;
-        margin:0 120px;
-        width:400px;
-        .title{
-            letter-spacing: 3px;
-            position: relative;
+    .background{
+        display:flex;
+        width:100%;
+        height:450px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        margin:0 auto;
+        position:relative;
+        &.left{
+            background-position:30% 0;
         }
-        .description{
-            position: relative;
+        &.right{
+            background-position:80% 0;
         }
-        .overlay{
-        @media (max-width: 970px) {
-            position:absolute;
-            background-color:white;
-            top:0;
-            left:0;
-            opacity:.7;
-            width:100%;
-            height:100%;
-            } 
+        .content{
+            align-self:center;
+            margin:0 120px;
+            width:400px;
+            .title{
+                letter-spacing: 3px;
+                position: relative;
+            }
+            .description{
+                position: relative;
+            }
         }
         @media (max-width: 970px) {
             margin:auto;
-        } 
+            .overlay{
+                position:absolute;
+                background-color:white;
+                top:0;
+                left:0;
+                opacity:.7;
+                width:100%;
+                height:100%;
+            }
+            .content{
+                margin:25px;
+            }
+            &.left{
+                background-position:-110px 0;
+            }
+            &.right{
+                background-position:90% 0;
+        }
+        }
     }
-    .button{
-        top:50px;
-        position: relative;
-        height:55px;
-        padding: 1em 1.5em;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        outline: none;
-        font-size: 18px;
-        margin: 1em 0.8em;
-        color:#B07B58;
+`
+export const Button = styled.span`
+    top:50px;
+    position: relative;
+    height:55px;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 1em 0.8em;
+    color:#B07B58;
 
     ::after,::before{
         content: '';
@@ -96,8 +95,5 @@ margin-bottom:20px;
         width: 100%;
         height: 100%;
     }
-    }
-}
-
 `
 

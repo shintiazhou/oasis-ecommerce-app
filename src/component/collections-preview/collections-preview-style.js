@@ -4,7 +4,7 @@ const CollectionPreview = styled.div`
     color:#448487;
     display: flex;
     flex-direction: column;
-    margin:100px 0 0px 0;
+    margin:100px auto 0 auto;
     .title {
         font-weight:bolder;
         letter-spacing:2px;

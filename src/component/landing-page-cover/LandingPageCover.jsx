@@ -1,5 +1,5 @@
 import React from "react"
-import { LandingPageCover, Title } from "./landing-page-cover-style"
+import { LandingPageCover, Caption, Button } from "./landing-page-cover-style"
 import { withRouter } from "react-router-dom"
 
 const containerVariants = {
@@ -35,25 +35,21 @@ const LandingPageCoverComponent = (props) => {
         variants={containerVariants}
         initial="hidden"
         animate="visible">
-        <Title
+        <Caption
             variants={childVariants}
             animate="visible">
-
-            "Style is something each of us already has, all we need to do is find it."
+            <div className="title">
+                "Style is something each of us already has, all we need to do is find it."
+                </div>
             <div>
-                <span className="button"
+                <Button
                     onClick={() => props.history.push("shop")}
                 >
                     Shop Now
-                </span>
+                </Button>
+            </div>
+        </Caption>
 
-            </div>
-            <div className="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </Title>
 
     </LandingPageCover>
 }

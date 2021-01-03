@@ -18,7 +18,7 @@ const CartMenuComponent = () => {
         itemListElement="div"
         right
         customCrossIcon={false}
-        width={"400px"}
+        width={"300px"}
         pageWrapId={"page-wrap"} outerContainerId={"outer-container"}
         customBurgerIcon={false}
         isOpen={!hidden}
