@@ -1,19 +1,24 @@
 import styled from "styled-components"
 
 const Footer = styled.div`
+    padding:50px;
     width:100%;
+    flex-direction:column;
     display:flex;
     height:270px;
     color:white;
     background-color:#214142;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     text-align:center;
-    .logo{
-        width:80vw;
-        margin:0 0 10px 0;
-        padding-top:70px;
-        border-top:2px solid #021717;
+    .icons{
+        display:flex;
+        flex-direction:row;
+        width:150px;
+        justify-content:space-between;
+        div{
+            cursor:pointer;
+        }
     }
     .description{
         font-size:0.8em;
