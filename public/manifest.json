@@ -9,6 +9,7 @@
     }
   ],
   "start_url": ".",
+  "description": "Oasis Clothing is a e-commerce app project created with react",
   "display": "standalone",
   "theme_color": "#448487",
   "background_color": "#a0d9cd"
