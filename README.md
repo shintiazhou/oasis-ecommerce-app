@@ -4,7 +4,7 @@
 Application will allow users to sign in/sign up, browse products they want to buy, add products to their shopping cart and checkout using stripe payment
 
 ### live preview 
-https://oasis-clothing.herokuapp.com/
+https://oasis-sz.netlify.app/
 
 ## Available Scripts
 
